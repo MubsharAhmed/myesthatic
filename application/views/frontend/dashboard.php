@@ -21,7 +21,7 @@
                          <div class="d-flex d-none date" id="">
                              <input class="form-control " type="date" class="">
                              <button class="btn btnRefresh" id=""> <img
-                                     src="<?php echo base_url(); ?>/assets/images/reload.svg" alt=""
+                                     src="<?php echo base_url(); ?>assets/images/reload.svg" alt=""
                                      width="15px"></button>
                          </div>
                      </div>
@@ -47,11 +47,11 @@
                              <div class="card-body">
                                  <div class="d-flex justify-content-between align-items-center">
                                      <div class="d-flex justify-content-between align-items-center">
-                                         <img src="<?php echo base_url(); ?>/assets/images/ous.svg" alt="">
+                                         <img src="<?php echo base_url(); ?>assets/images/ous.svg" alt="">
                                          <p class="m-0 ms-2 fs1">Reports</p>
                                      </div>
                                      <div>
-                                         <img src="<?php echo base_url(); ?>/assets/images/ellep.png" alt="">
+                                         <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
                                      </div>
                                  </div>
                                  <div class="row">
@@ -59,13 +59,13 @@
                                          <p class="fs2">Financial & Inventory</p>
                                          <div class="mt-2">
                                              <!-- <div class="blBox d-flex justify-content-evenly align-items-center p-2">
-                    <img src="<?php echo base_url(); ?>/assets/images/ar.png" alt="">
+                    <img src="<?php echo base_url(); ?>assets/images/ar.png" alt="">
                     <p class="fs4 m-0">2.1%</p>
                   </div> -->
                                          </div>
                                      </div>
                                      <div class="col-md-6 my-1 d-flex justify-content-end align-items-center">
-                                         <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/onof.svg"
+                                         <img class="img-fluid" src="<?php echo base_url(); ?>assets/images/onof.svg"
                                              alt="">
                                      </div>
                                  </div>
@@ -77,11 +77,11 @@
                              <div class="card-body">
                                  <div class="d-flex justify-content-between align-items-center">
                                      <div class="d-flex justify-content-between align-items-center">
-                                         <img src="<?php echo base_url(); ?>/assets/images/op.svg" alt="">
+                                         <img src="<?php echo base_url(); ?>assets/images/op.svg" alt="">
                                          <p class="m-0 ms-2 fs1"> Treatments Administered</p>
                                      </div>
                                      <div>
-                                         <img src="<?php echo base_url(); ?>/assets/images/ellep.png" alt="">
+                                         <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
                                      </div>
                                  </div>
                                  <div class="row">
@@ -95,7 +95,7 @@
                                          </div>
                                      </div>
                                      <div class="col-md-6 my-1 d-flex justify-content-end align-items-center">
-                                         <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/nop.svg"
+                                         <img class="img-fluid" src="<?php echo base_url(); ?>assets/images/nop.svg"
                                              alt="">
                                      </div>
                                  </div>
@@ -107,11 +107,11 @@
                              <div class="card-body">
                                  <div class="d-flex justify-content-between align-items-center">
                                      <div class="d-flex justify-content-between align-items-center">
-                                         <img src="<?php echo base_url(); ?>/assets/images/sti.svg" alt="">
+                                         <img src="<?php echo base_url(); ?>assets/images/sti.svg" alt="">
                                          <p class="m-0 ms-2 fs1">Stock Items</p>
                                      </div>
                                      <div>
-                                         <img src="<?php echo base_url(); ?>/assets/images/ellep.png" alt="">
+                                         <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
                                      </div>
                                  </div>
                                  <div class="row">
@@ -127,18 +127,18 @@
                                      <div class="col-md-6 my-1">
                                          <div class="d-flex justify-content-between">
                                              <div class="d-flex align-items-center ">
-                                                 <img src="<?php echo base_url(); ?>/assets/images/bdot.png" alt="">
+                                                 <img src="<?php echo base_url(); ?>assets/images/bdot.png" alt="">
                                                  <p class="mb-0 fs7 ms-1">75.9% </p>
                                              </div>
                                              <div class="d-flex align-items-center ">
-                                                 <img src="<?php echo base_url(); ?>/assets/images/rdot.png" alt="">
+                                                 <img src="<?php echo base_url(); ?>assets/images/rdot.png" alt="">
                                                  <p class="mb-0 fs7 ms-1">89.9% </p>
                                              </div>
                                          </div>
                                          <div class=" mt-1 mb-0 d-flex justify-content-end align-items-center"
                                              style="height: 70%;">
                                              <img class="img-fluid"
-                                                 src="<?php echo base_url(); ?>/assets/images/stio.svg" alt="">
+                                                 src="<?php echo base_url(); ?>assets/images/stio.svg" alt="">
                                          </div>
 
                                      </div>
@@ -158,7 +158,7 @@
                                          <div class="card-body">
                                              <div class="">
                                                  <div class="d-flex align-items-center">
-                                                     <img src="<?php echo base_url(); ?>/assets/images/apc.svg" alt="">
+                                                     <img src="<?php echo base_url(); ?>assets/images/apc.svg" alt="">
                                                      <p class="m-0 ms-2 fs8">Inventory checked out Today</p>
 
                                                  </div>
@@ -167,7 +167,7 @@
                                                      <p class="fs9 m-0">$30,000</p>
                                                      <div class="d-flex justify-content-between align-items-center">
                                                          <img class="mx-1"
-                                                             src="<?php echo base_url(); ?>/assets/images/aru.png"
+                                                             src="<?php echo base_url(); ?>assets/images/aru.png"
                                                              alt="">
                                                          <p class="mb-0 ff1">2.99%</p>
                                                      </div>
@@ -233,7 +233,7 @@
                                          <div class="card-body">
                                              <div class="">
                                                  <div class="d-flex align-items-center">
-                                                     <img src="<?php echo base_url(); ?>/assets/images/apii.svg" alt="">
+                                                     <img src="<?php echo base_url(); ?>assets/images/apii.svg" alt="">
                                                      <p class="m-0 ms-2 fs8">Average Price of
                                                          inventory items</p>
 
@@ -243,7 +243,7 @@
                                                      <p class="fs9 m-0">$10,000</p>
                                                      <div class="d-flex justify-content-between align-items-center">
                                                          <img class="mx-1"
-                                                             src="<?php echo base_url(); ?>/assets/images/icuppp.svg"
+                                                             src="<?php echo base_url(); ?>assets/images/icuppp.svg"
                                                              alt="">
                                                          <p class="mb-0 fff2">2.99%</p>
                                                      </div>
@@ -259,7 +259,7 @@
                                          <div class="card-body">
                                              <div class="">
                                                  <div class="d-flex align-items-center">
-                                                     <img src="<?php echo base_url(); ?>/assets/images/ixs.svg" alt="">
+                                                     <img src="<?php echo base_url(); ?>assets/images/ixs.svg" alt="">
                                                      <p class="m-0 ms-2 fs8">Inventory expiring (30 days)</p>
 
                                                  </div>
@@ -268,7 +268,7 @@
                                                      <p class="fs9 m-0">$10,000</p>
                                                      <div class="d-flex justify-content-between align-items-center">
                                                          <img class="mx-1"
-                                                             src="<?php echo base_url(); ?>/assets/images/arb.png"
+                                                             src="<?php echo base_url(); ?>assets/images/arb.png"
                                                              alt="">
                                                          <p class="mb-0 ff2">2.99%</p>
                                                      </div>
@@ -284,7 +284,7 @@
                                          <div class="card-body">
                                              <div class="">
                                                  <div class="d-flex align-items-center">
-                                                     <img src="<?php echo base_url(); ?>/assets/images/lsi.svg" alt="">
+                                                     <img src="<?php echo base_url(); ?>assets/images/lsi.svg" alt="">
                                                      <p class="m-0 ms-2 fs8">Low Stock Items</p>
 
                                                  </div>
@@ -293,7 +293,7 @@
                                                      <p class="fs9 m-0">500</p>
                                                      <div class="d-flex justify-content-between align-items-center">
                                                          <img class="mx-1"
-                                                             src="<?php echo base_url(); ?>/assets/images/arb2.png"
+                                                             src="<?php echo base_url(); ?>assets/images/arb2.png"
                                                              alt="">
                                                          <p class="mb-0 ff3">2.99%</p>
                                                      </div>
@@ -331,7 +331,7 @@
                                      <div class="d-flex d-none date" id="">
                                          <input class="form-control " type="date" class="">
                                          <button class="btn btnRefresh" id=""> <img
-                                                 src="<?php echo base_url(); ?>/assets/images/reload.svg" alt=""
+                                                 src="<?php echo base_url(); ?>assets/images/reload.svg" alt=""
                                                  width="15px"></button>
                                      </div>
 
@@ -350,7 +350,7 @@
                      <div class="d-flex justify-content-between align-items-center flex-wrap">
                          <p class="ff4 m-0">Inventory History</p>
                          <div>
-                             <img src="<?php echo base_url(); ?>/assets/images/ellep.png" alt="">
+                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
                          </div>
 
                      </div>
@@ -358,7 +358,7 @@
                      <div class="row  borderB ">
                          <div class="col-md-6 my-2">
                              <div class="d-flex gap-2 align-items-center">
-                                 <img src="<?php echo base_url(); ?>/assets/images/arau.svg" alt="" class="arowU">
+                                 <img src="<?php echo base_url(); ?>assets/images/arau.svg" alt="" class="arowU">
                                  <p class="m-0 fs2">Add Stock Items</p>
 
                              </div>
@@ -366,7 +366,7 @@
                          </div>
                          <div class="col-md-6 my-2">
                              <div class="d-flex gap-2 align-items-center">
-                                 <img src="<?php echo base_url(); ?>/assets/images/assigned.svg" alt="" class="arowd">
+                                 <img src="<?php echo base_url(); ?>assets/images/assigned.svg" alt="" class="arowd">
                                  <p class="m-0 fs2">Assinged Items</p>
                              </div>
                              <p class="ff6">Items 10,356</p>
@@ -383,14 +383,14 @@
                                  <div class="d-flex justify-content-between align-items-center flex-wrap my-2">
                                      <div class="d-flex gap-1 align-items-center">
                                          <div class="mBox">
-                                             <img src="<?php echo base_url(); ?>/assets/images/m1.png" alt="">
+                                             <img src="<?php echo base_url(); ?>assets/images/m1.png" alt="">
                                          </div>
                                          <p class="m-0 ff8">Xeomin</p>
                                      </div>
 
 
                                      <div class="d-flex justify-content-between align-items-center">
-                                         <img class="mx-1" src="<?php echo base_url(); ?>/assets/images/ru.png" alt="">
+                                         <img class="mx-1" src="<?php echo base_url(); ?>assets/images/ru.png" alt="">
                                          <p class="mb-0 ff2">2.99%</p>
                                      </div>
 
@@ -398,14 +398,14 @@
                                  <div class="d-flex justify-content-between align-items-center flex-wrap my-2">
                                      <div class="d-flex gap-1 align-items-center">
                                          <div class="mBox">
-                                             <img src="<?php echo base_url(); ?>/assets/images/m1.png" alt="">
+                                             <img src="<?php echo base_url(); ?>assets/images/m1.png" alt="">
                                          </div>
                                          <p class="m-0 ff8">Xeomin</p>
                                      </div>
 
 
                                      <div class="d-flex justify-content-between align-items-center">
-                                         <!-- <img class="mx-1" src="<?php echo base_url(); ?>/assets/images/yu.png" alt=""> -->
+                                         <!-- <img class="mx-1" src="<?php echo base_url(); ?>assets/images/yu.png" alt=""> -->
                                          <i class="fa-solid fa-arrow-up fsy6"></i>
                                          <p class="mb-0 fsy6">2.99%</p>
                                      </div>
@@ -414,14 +414,14 @@
                                  <div class="d-flex justify-content-between align-items-center flex-wrap my-2">
                                      <div class="d-flex gap-1 align-items-center">
                                          <div class="mBox">
-                                             <img src="<?php echo base_url(); ?>/assets/images/m1.png" alt="">
+                                             <img src="<?php echo base_url(); ?>assets/images/m1.png" alt="">
                                          </div>
                                          <p class="m-0 ff8">Xeomin</p>
                                      </div>
 
 
                                      <div class="d-flex justify-content-between align-items-center">
-                                         <img class="mx-1" src="<?php echo base_url(); ?>/assets/images/bu.png" alt="">
+                                         <img class="mx-1" src="<?php echo base_url(); ?>assets/images/bu.png" alt="">
                                          <p class="mb-0 fff3">2.99%</p>
                                      </div>
 

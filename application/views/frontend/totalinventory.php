@@ -9,7 +9,8 @@
               <div class="col-md-6 my-2">
                   <div class="row">
                       <div class="col-md-4">
-                          <a href="./addinventory.html" class="btn  btnAdd w-100">Add Inventory</a>
+                          <a href="<?php echo base_url(); ?>general/addInventory" class="btn  btnAdd w-100">Add
+                              Inventory</a>
                       </div>
                       <div class="col-md-4 my-1">
                           <select name="" id="" class="form-select fsele">

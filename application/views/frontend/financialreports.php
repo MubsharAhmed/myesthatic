@@ -54,7 +54,8 @@
                               </select>
                           </div>
                           <div class="col-md-4 my-1 d-flex justify-content-end align-items-end">
-                              <a href="./reports2.html" class="btn btnAdd">show result</a>
+                              <a href="<?php echo base_url(); ?>gerenral/financialReportdetail" class="btn btnAdd">show
+                                  result</a>
                           </div>
                       </div>
                   </div>
