@@ -26,7 +26,7 @@ class General extends BaseController
         if (!$this->isAdmin()) {
             redirect('login');
         }
-        $this->global['pageTitle'] = 'My Esthatic : Add Patients';
+        $this->global['pageTitle'] = 'My Esthatic : Add Patient';
 
         $this->loadViews("frontend/addpatient", $this->global, NULL);
 
@@ -36,7 +36,7 @@ class General extends BaseController
         if (!$this->isAdmin()) {
             redirect('login');
         }
-        $this->global['pageTitle'] = 'My Esthatic : Procedure reports';
+        $this->global['pageTitle'] = 'My Esthatic : Procedure report';
 
         $this->loadViews("frontend/procedurereports", $this->global, NULL);
 
@@ -46,11 +46,101 @@ class General extends BaseController
         if (!$this->isAdmin()) {
             redirect('login');
         }
-        $this->global['pageTitle'] = 'My Esthatic : Procedure reports';
+        $this->global['pageTitle'] = 'My Esthatic : Patients report';
 
         $this->loadViews("frontend/preport", $this->global, NULL);
 
     }
 
+    public function locations(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Locations';
 
+        $this->loadViews("frontend/locations", $this->global, NULL);
+
+    }
+
+    public function vendors(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Vendors';
+
+        $this->loadViews("frontend/vendors", $this->global, NULL);
+
+    }
+
+    public function totalInventory(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Total Inventory';
+
+        $this->loadViews("frontend/totalinventory", $this->global, NULL);
+
+    }
+
+    public function inventoryHistory(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Inventory History';
+
+        $this->loadViews("frontend/inventoryhistory", $this->global, NULL);
+
+    }
+
+    public function financialReports(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Financial Reports';
+
+        $this->loadViews("frontend/financialreports", $this->global, NULL);
+
+    }
+
+
+    public function productCost(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Product Cost';
+
+        $this->loadViews("frontend/productcost", $this->global, NULL);
+
+    }
+
+    public function shop(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Shop';
+
+        $this->loadViews("frontend/shop", $this->global, NULL);
+
+    }
+
+    public function settings(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Settings';
+
+        $this->loadViews("frontend/settings", $this->global, NULL);
+
+    }
+
+    public function support(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Support';
+
+        $this->loadViews("frontend/support", $this->global, NULL);
+
+    }
+    
 }
