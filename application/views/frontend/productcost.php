@@ -9,7 +9,7 @@
             <div class="col-md-6 my-2">
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="<?php echo base_url(); ?>gerenal/addProductCost" class="btn  btnAdd w-100">Add
+                        <a href="<?php echo base_url(); ?>general/addProductCost" class="btn  btnAdd w-100">Add
                             Cost</a>
                     </div>
                     <div class="col-md-4 my-1">

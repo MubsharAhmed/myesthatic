@@ -93,6 +93,15 @@ class General extends BaseController
         $this->loadViews("frontend/inventoryhistory", $this->global, NULL);
 
     }
+    public function addInventory(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Add Inventory';
+
+        $this->loadViews("frontend/addinventory", $this->global, NULL);
+
+    }
 
     public function financialReports(){
         if (!$this->isAdmin()) {

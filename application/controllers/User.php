@@ -8,15 +8,16 @@ class User extends BaseController
     public function __construct()
     {
         parent::__construct();
-        // $this->load->model('user_model');
+        $this->load->model('user_model');
         // $this->isLoggedIn();
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
     }
 
     public function index()
     {
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
+
         $this->global['pageTitle'] = 'VearaLink : Dashboard';
         // $searchText = '';
         // $data['managerCount'] = $this->user_model->managerCount($searchText);
@@ -28,16 +29,18 @@ class User extends BaseController
 
     public function users()
     {
+
+        $this->global['pageTitle'] = 'My Esthatic : Users';
+        $this->loadViews("frontend/users", $this->global, NULL);
+    }
+
+    public function addUser()
+    {
         if (!$this->isAdmin()) {
             redirect('login');
         }
-        $this->global['pageTitle'] = 'My Esthatic : Users';
-        // $searchText = '';
-        // $data['managerCount'] = $this->user_model->managerCount($searchText);
-        // $data['agentCount'] = $this->user_model->agentCount($searchText);
-        // $data['userCount'] = $this->user_model->userCount($searchText);
-
-        $this->loadViews("frontend/users", $this->global, NULL);
+        $this->global['pageTitle'] = 'My Esthatic : Add User';
+        $this->loadViews("frontend/adduser", $this->global, NULL);
     }
 
 
