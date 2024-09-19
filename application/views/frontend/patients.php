@@ -67,7 +67,10 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
+
+
                                         <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
                                     </td>
 
                                     <td>
@@ -86,47 +89,9 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
-                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
-                                    </td>
 
-
-                                    <td>
-                                        <div class="elep p-2 ">
-                                            <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="d-flex gap-1 align-items-center">
-
-                                        Ronaldo
-                                    </td>
-                                    <td>Example@info.com</td>
-                                    <td>+98 765 4321 0</td>
-                                    <td>2024-04-17</td>
-                                    <td>Location A</td>
-                                    <td class="fw-bold text-black">
-                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
-                                    </td>
-
-
-                                    <td>
-                                        <div class="elep p-2 ">
-                                            <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="d-flex gap-1 align-items-center">
-
-                                        Ronaldo
-                                    </td>
-                                    <td>Example@info.com</td>
-                                    <td>+98 765 4321 0</td>
-                                    <td>2024-04-17</td>
-                                    <td>Location A</td>
-                                    <td class="fw-bold text-black">
-                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+                                        <a class="text-black"
+                                            href="<?php echo base_url(); ?>general/procedureReports">View</a>
                                     </td>
 
 
@@ -146,7 +111,12 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
-                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+                                        <a class="text-black"
+                                            href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+                                     
+
                                     </td>
 
 
@@ -165,7 +135,8 @@
                                     <td>+98 765 4321 0</td>
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
-                                    <td class="fw-bold text-black">
+                                    <td class="fw-bold text-black"
+                                 
                                         <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
                                     </td>
 
@@ -186,7 +157,54 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
+                                     
                                         <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+                                    </td>
+
+
+                                    <td>
+                                        <div class="elep p-2 ">
+                                            <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex gap-1 align-items-center">
+
+                                        Ronaldo
+                                    </td>
+                                    <td>Example@info.com</td>
+                                    <td>+98 765 4321 0</td>
+                                    <td>2024-04-17</td>
+                                    <td>Location A</td>
+                                    <td class="fw-bold text-black">
+
+
+                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+                                    </td>
+
+
+                                    <td>
+                                        <div class="elep p-2 ">
+                                            <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex gap-1 align-items-center">
+
+                                        Ronaldo
+                                    </td>
+                                    <td>Example@info.com</td>
+                                    <td>+98 765 4321 0</td>
+                                    <td>2024-04-17</td>
+                                    <td>Location A</td>
+                                    <td class="fw-bold text-black">
+
+                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
                                     </td>
 
 

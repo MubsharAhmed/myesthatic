@@ -9,7 +9,8 @@
               <div class="col-md-6 my-2">
                   <div class="row">
                       <div class="col-md-4">
-                          <a href="./addlocation.html" class="btn  btnAdd w-100">Add Location</a>
+                          <a href="<?php echo base_url(); ?>general/addLocation" class="btn  btnAdd w-100">Add
+                              Location</a>
                       </div>
                       <!-- <div class="col-md-4 my-1">
             <select name="" id="" class="form-select fsele">

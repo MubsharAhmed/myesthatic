@@ -117,7 +117,7 @@
                         </a>
                         <hr class="dropdown-divider" />
                         <a class="dropdown-item d-flex align-items-center gap-2 py-2"
-                            href="<?php echo base_url(); ?>/general/settings"><i
+                            href="<?php echo base_url(); ?>general/settings"><i
                                 class="material-icons-outlined">person_outline</i>Profile</a>
 
                         <hr class="dropdown-divider" />
@@ -156,7 +156,7 @@
                     <a href="<?php echo base_url(); ?>dashboard" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Dashboard.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Dashboard.svg" alt="">
                         </div>
                         <div class="menu-title">Home</div>
                     </a>
@@ -166,7 +166,7 @@
                     <a href="<?php echo base_url(); ?>user/users" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Users.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Users.svg" alt="">
                         </div>
                         <div class="menu-title">Users</div>
                     </a>
@@ -176,7 +176,7 @@
                     <a href="<?php echo base_url(); ?>general/patients" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Patients.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Patients.svg" alt="">
                         </div>
                         <div class="menu-title">Patients</div>
                     </a>
@@ -197,7 +197,9 @@
 
                 </li>
                 <li>
+
                     <a href="<?php echo base_url(); ?>general/vendors" class="">
+
                         <div class="icnonDiv">
 
                             <span class="img2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -214,7 +216,7 @@
                     <a href="<?php echo base_url(); ?>general/totalInventory" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Inventory.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Inventory.svg" alt="">
                         </div>
                         <div class="menu-title">Total Inventory</div>
                     </a>
@@ -239,7 +241,7 @@
                     <a href="<?php echo base_url(); ?>general/financialReports" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Reports.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Reports.svg" alt="">
                         </div>
                         <div class="menu-title">Financial Reports</div>
                     </a>
@@ -249,7 +251,7 @@
                     <a href="<?php echo base_url(); ?>general/procedureReports" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/ProcedureReports.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/ProcedureReports.svg" alt="">
                         </div>
                         <div class="menu-title">Procedure Reports</div>
                     </a>
@@ -260,7 +262,7 @@
                     <a href="<?php echo base_url(); ?>general/productCost" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Reports.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Reports.svg" alt="">
                         </div>
                         <div class="menu-title">Product Cost</div>
                     </a>
@@ -272,7 +274,7 @@
                     <a href="#" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Shops.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Shops.svg" alt="">
                         </div>
                         <div class="menu-title">Shop</div>
                     </a>
@@ -288,7 +290,7 @@
                     <a href="<?php echo base_url(); ?>general/settings" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Setting.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Setting.svg" alt="">
                         </div>
                         <div class="menu-title">Settings</div>
                     </a>
@@ -298,7 +300,7 @@
                     <a href="<?php echo base_url(); ?>general/support" class="">
                         <div class="icnonDiv">
 
-                            <img class="img2" src="<?php echo base_url(); ?>/assets/images/Support.svg" alt="">
+                            <img class="img2" src="<?php echo base_url(); ?>assets/images/Support.svg" alt="">
                         </div>
                         <div class="menu-title">Support</div>
                     </a>
@@ -322,7 +324,7 @@
             <a href="#" class="btn btn-danger d-flex justify-content-center  align-items-center gap-2">
                 <div class="icnonDiv">
 
-                    <img class="i" src="<?php echo base_url(); ?>/assets/images/LogOut.svg" alt="">
+                    <img class="i" src="<?php echo base_url(); ?>assets/images/LogOut.svg" alt="">
                 </div>
                 <div class="menu-title">Logout</div>
             </a>
