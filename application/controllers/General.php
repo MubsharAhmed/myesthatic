@@ -54,6 +54,16 @@ class General extends BaseController
 
     }
 
+    public function addLocation(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Add Location';
+
+        $this->loadViews("frontend/addLocation", $this->global, NULL);
+
+    }
+
     public function vendors(){
         if (!$this->isAdmin()) {
             redirect('login');
@@ -94,6 +104,16 @@ class General extends BaseController
 
     }
 
+    public function financialReportDetail(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Financial Reports Detail';
+
+        $this->loadViews("frontend/financialreportdetail", $this->global, NULL);
+
+    }
+
     public function procedureReports(){
         if (!$this->isAdmin()) {
             redirect('login');
@@ -112,6 +132,16 @@ class General extends BaseController
         $this->global['pageTitle'] = 'My Esthatic : Product Cost';
 
         $this->loadViews("frontend/productcost", $this->global, NULL);
+
+    }
+
+    public function addProductCost(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Add Product Cost';
+
+        $this->loadViews("frontend/addproductcost", $this->global, NULL);
 
     }
 
