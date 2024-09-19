@@ -172,7 +172,7 @@
 
                 </li>
                 <li>
-                    <a href="./patients.html" class="">
+                    <a href="<?php echo base_url(); ?>general/patients" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/Patients.svg" alt="">
@@ -245,7 +245,7 @@
 
                 </li>
                 <li>
-                    <a href="./procedurereports.html" class="">
+                    <a href="<?php echo base_url(); ?>general/procedureReports" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/ProcedureReports.svg" alt="">
