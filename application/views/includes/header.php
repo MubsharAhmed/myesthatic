@@ -115,55 +115,13 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MAIN NAVIGATION</li>
 
-                    <li>
+                    <!-- <li>
                         <a href="<?php echo base_url(); ?>general/generalSetting">
                             <i class="fa fa-edit"></i>
                             <span>General Setting</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>general/popup">
-                            <i class="fa fa-edit"></i>
-                            <span>Popup Setting</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>general/home">
-                            <i class="fa fa-edit"></i>
-                            <span>Home Page Setting</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>general/homeeditor">
-                            <i class="fa fa-edit"></i>
-                            <span>Home Section Setting</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>general/aboutUs">
-                            <i class="fa fa-edit"></i>
-                            <span>About Us Setting</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>general/services">
-                            <i class="fa fa-edit"></i>
-                            <span>Services Setting</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url(); ?>general/caseStudies">
-                            <i class="fa fa-edit"></i>
-                            <span>Case Studies Setting</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo base_url(); ?>general/pricepackage">
-                            <i class="fa fa-edit"></i>
-                            <span>Price & Packages Setting</span>
-                        </a>
-                    </li>
+                    </li> -->
+                  
 
 
                 </ul>
