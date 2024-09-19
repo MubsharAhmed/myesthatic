@@ -1,11 +1,11 @@
 # Ignore uploads directory
-# /uploads/*
-# application/config/config.php
-# application/config/database.php
+/uploads/*
+application/config/config.php
+application/config/database.php
 
 # Composer Files
-# composer.lock
-# /vendor/
+composer.lock
+/vendor/
 
-# .htaccess
-# .index.php
+.htaccess
+.index.php
