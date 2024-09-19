@@ -32,15 +32,7 @@ class General extends BaseController
 
     }
 
-    public function procedureReports(){
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
-        $this->global['pageTitle'] = 'My Esthatic : Procedure report';
 
-        $this->loadViews("frontend/procedurereports", $this->global, NULL);
-
-    }
 
     public function pReports(){
         if (!$this->isAdmin()) {
@@ -99,6 +91,16 @@ class General extends BaseController
         $this->global['pageTitle'] = 'My Esthatic : Financial Reports';
 
         $this->loadViews("frontend/financialreports", $this->global, NULL);
+
+    }
+
+    public function procedureReports(){
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
+        $this->global['pageTitle'] = 'My Esthatic : Procedure report';
+
+        $this->loadViews("frontend/procedurereports", $this->global, NULL);
 
     }
 
