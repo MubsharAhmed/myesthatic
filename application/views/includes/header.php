@@ -116,7 +116,8 @@
                             </div>
                         </a>
                         <hr class="dropdown-divider" />
-                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#"><i
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2"
+                            href="<?php echo base_url(); ?>/general/settings"><i
                                 class="material-icons-outlined">person_outline</i>Profile</a>
 
                         <hr class="dropdown-divider" />
@@ -182,7 +183,7 @@
 
                 </li>
                 <li>
-                    <a href="./location.html" class="">
+                    <a href="<?php echo base_url(); ?>/general/locations" class="">
                         <div class="icnonDiv">
 
                             <span class="img2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -196,7 +197,7 @@
 
                 </li>
                 <li>
-                    <a href="./vendors.html" class="">
+                    <a href="<?php echo base_url(); ?>/genera/vendors" class="">
                         <div class="icnonDiv">
 
                             <span class="img2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -210,7 +211,7 @@
 
                 </li>
                 <li>
-                    <a href="./inventory.html" class="">
+                    <a href="<?php echo base_url(); ?>/general/totalInventory" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/Inventory.svg" alt="">
@@ -221,7 +222,7 @@
                 </li>
 
                 <li>
-                    <a href="./inventoryhistory.html" class="">
+                    <a href="<?php echo base_url(); ?>/general/inventoryHistory" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/Inventory.svg" alt="">
@@ -235,7 +236,7 @@
 
 
                 <li>
-                    <a href="./reports.html" class="">
+                    <a href="<?php echo base_url(); ?>/general/financialReports" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/Reports.svg" alt="">
@@ -256,7 +257,7 @@
                 </li>
 
                 <li>
-                    <a href="./productcost.html" class="">
+                    <a href="<?php echo base_url(); ?>/general/productCost" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/Reports.svg" alt="">
@@ -284,7 +285,7 @@
             <ul class="metismenu d-flex flex-column justify-content-center m-0">
 
                 <li class="">
-                    <a href="./setting.html" class="">
+                    <a href="<?php echo base_url(); ?>/general/settings" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/Setting.svg" alt="">
@@ -294,7 +295,7 @@
 
                 </li>
                 <li class="">
-                    <a href="./support.html" class="">
+                    <a href="<?php echo base_url(); ?>/general/support" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>/assets/images/Support.svg" alt="">
