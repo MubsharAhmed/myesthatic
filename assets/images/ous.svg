@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="Onboard_Users" data-name="Onboard Users" transform="translate(-27 -25)">
+    <circle id="Ellipse_9" data-name="Ellipse 9" cx="21" cy="21" r="21" transform="translate(27 25)" fill="#7eb1ff" opacity="0.08"/>
+    <g id="Onboard_Users-2" data-name="Onboard Users" transform="translate(38 36)">
+      <path id="Path_393" data-name="Path 393" d="M14,13a4,4,0,1,1,4-4A4,4,0,0,1,14,13Zm0-6.666A2.667,2.667,0,1,0,16.666,9,2.667,2.667,0,0,0,14,6.333Z" transform="translate(-3.993 -2.333)" fill="#7eb1ff"/>
+      <path id="Path_394" data-name="Path 394" d="M11.963,26.92a10,10,0,0,1-7.726-3.66l-.347-.427.347-.42a10,10,0,0,1,15.452,0l.347.42-.347.427A10,10,0,0,1,11.963,26.92ZM5.637,22.84a8.666,8.666,0,0,0,12.666,0,8.666,8.666,0,0,0-12.666,0Z" transform="translate(-1.956 -6.921)" fill="#7eb1ff"/>
+      <path id="Path_395" data-name="Path 395" d="M11,21a10,10,0,1,1,7.726-3.66A10,10,0,0,1,11,21ZM11,2.333A8.666,8.666,0,1,0,19.662,11,8.666,8.666,0,0,0,11,2.333Z" transform="translate(-0.989 -0.999)" fill="#7eb1ff"/>
+      <path id="Path_396" data-name="Path 396" d="M5.18,23.129s6.713,7.5,13.546.747l.88-.747s-5.706-5.92-11.5-2.367Z" transform="translate(-2.386 -7.209)" fill="#7eb1ff"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="3.333" cy="3.333" r="3.333" transform="translate(6.674 3.334)" fill="#7eb1ff"/>
+    </g>
+  </g>
+</svg>
