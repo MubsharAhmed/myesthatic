@@ -197,7 +197,9 @@
 
                 </li>
                 <li>
-                    <a href="<?php echo base_url(); ?>genera/vendors" class="">
+
+                    <a href="<?php echo base_url(); ?>general/vendors" class="">
+
                         <div class="icnonDiv">
 
                             <span class="img2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

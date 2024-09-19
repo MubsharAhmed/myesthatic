@@ -10,7 +10,7 @@
                 <div class="row">
 
                     <div class="col-md-3">
-                        <a href="<?php echo base_url(); ?>addPatient" class="btn  btnAdd w-100">Add Patient</a>
+                        <a href="<?php echo base_url(); ?>general/addPatient" class="btn  btnAdd w-100">Add Patient</a>
                     </div>
                     <div class="col-md-3">
                         <label for="csv" class="btn  btnAdd w-100">Upload CSV</label>
@@ -67,8 +67,10 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
-                                        <a class="text-black"
-                                            href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+
+                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
                                     </td>
 
                                     <td>
@@ -87,27 +89,7 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
-                                        <a class="text-black"
-                                            href="<?php echo base_url(); ?>general/procedureReports">View</a>
-                                    </td>
 
-
-                                    <td>
-                                        <div class="elep p-2 ">
-                                            <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="d-flex gap-1 align-items-center">
-
-                                        Ronaldo
-                                    </td>
-                                    <td>Example@info.com</td>
-                                    <td>+98 765 4321 0</td>
-                                    <td>2024-04-17</td>
-                                    <td>Location A</td>
-                                    <td class="fw-bold text-black">
                                         <a class="text-black"
                                             href="<?php echo base_url(); ?>general/procedureReports">View</a>
                                     </td>
@@ -129,8 +111,33 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
+
                                         <a class="text-black"
                                             href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+                                     
+
+                                    </td>
+
+
+                                    <td>
+                                        <div class="elep p-2 ">
+                                            <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="d-flex gap-1 align-items-center">
+
+                                        Ronaldo
+                                    </td>
+                                    <td>Example@info.com</td>
+                                    <td>+98 765 4321 0</td>
+                                    <td>2024-04-17</td>
+                                    <td>Location A</td>
+                                    <td class="fw-bold text-black"
+                                 
+                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
                                     </td>
 
 
@@ -150,8 +157,9 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
-                                        <a class="text-black"
-                                            href="<?php echo base_url(); ?>general/procedureReports">View</a>
+                                     
+                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
                                     </td>
 
 
@@ -171,8 +179,10 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
-                                        <a class="text-black"
-                                            href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+
+                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
                                     </td>
 
 
@@ -192,8 +202,9 @@
                                     <td>2024-04-17</td>
                                     <td>Location A</td>
                                     <td class="fw-bold text-black">
-                                        <a class="text-black"
-                                            href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
+                                        <a class="text-black" href="<?php echo base_url(); ?>general/procedureReports">View</a>
+
                                     </td>
 
 
