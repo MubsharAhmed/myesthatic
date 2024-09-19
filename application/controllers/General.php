@@ -16,7 +16,7 @@ class General extends BaseController
         }
         $this->global['pageTitle'] = 'My Esthatic : Patients';
 
-        $this->loadViews("frontend/patietns", $this->global, NULL);
+        $this->loadViews("frontend/patients", $this->global, NULL);
 
 
 
