@@ -50,29 +50,29 @@
 
                             </div>
                             <div>
-                                    <?php $this->load->helper('form'); ?>
-                                    <?php echo validation_errors('<div class="alert alert-danger alert-dismissible fade show">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
-                                    <?php
+                                <?php $this->load->helper('form'); ?>
+                                <?php echo validation_errors('<div class="alert alert-danger alert-dismissible fade show">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
+                                <?php
                                     $this->load->helper('form');
                                     $error = $this->session->flashdata('error');
                                     if ($error) {
                                     ?>
-                                    <div class="alert alert-danger alert-dismissible fade show">
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                            aria-label="Close"></button>
-                                        <?php echo $error; ?>
-                                    </div>
-                                    <?php }
+                                <div class="alert alert-danger alert-dismissible fade show">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                    <?php echo $error; ?>
+                                </div>
+                                <?php }
                                     $success = $this->session->flashdata('success');
                                     if ($success) {
                                     ?>
-                                    <div class="alert alert-success alert-dismissible fade show">
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                            aria-label="Close"></button>
-                                        <?php echo $success; ?>
-                                    </div>
-                                    <?php } ?>
+                                <div class="alert alert-success alert-dismissible fade show">
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                    <?php echo $success; ?>
                                 </div>
+                                <?php } ?>
+                            </div>
 
                             <form action="<?php echo base_url(); ?>loginMe" method="post"
                                 class="bgCard mx-4 p-3 border8">
@@ -126,7 +126,8 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <a href="./index.html" class="forgText mt-4 mb-2 z9  ">Don't have an account?
+                                    <a href="<?php echo base_url(); ?>/users/signUp"
+                                        class="forgText mt-4 mb-2 z9  ">Don't have an account?
                                         Sign Up</a>
                                 </div>
 
