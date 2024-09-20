@@ -23,6 +23,7 @@ class Login extends CI_Controller
      */
     public function index()
     {
+
         $this->isLoggedIn();
     }
 
@@ -33,9 +34,12 @@ class Login extends CI_Controller
     {
         $isLoggedIn = $this->session->userdata('isLoggedIn');
 
+
+
         if (!isset($isLoggedIn) || $isLoggedIn != TRUE) {
             $this->load->view('users/login');
         } else {
+        
             redirect('/dashboard');
         }
     }
@@ -66,7 +70,7 @@ class Login extends CI_Controller
                     // 'userId' => $result->admin_id,
                     'name' => $result->name,
                     'email' => $result->email,
-                    'role' => 'admin',
+                    'role' => 'user',
                     'isLoggedIn' => TRUE
                 );
 

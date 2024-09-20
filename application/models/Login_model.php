@@ -1,19 +1,19 @@
-<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login_model extends CI_Model
 {
-   
+
     function loginMe($email, $password)
     {
         $this->db->select('*');
         $this->db->from('admin');
         $this->db->where('email', $email);
         $query = $this->db->get();
-        
+
         $user = $query->row();
-        
-        if(!empty($user)){
-            if(verifyHashedPassword($password, $user->password)){
+
+        if (!empty($user)) {
+            if (verifyHashedPassword($password, $user->password)) {
                 return $user;
             } else {
                 return array();
@@ -22,6 +22,13 @@ class Login_model extends CI_Model
             return array();
         }
     }
+
+    public function registerUser($data)
+    {
+        $this->db->insert('admin', $data);
+        return $this->db->insert_id(); 
+    }
+
 
     // function checkEmailExist($email)
     // {
@@ -48,7 +55,7 @@ class Login_model extends CI_Model
     //     }
     // }
 
-  
+
     // function getCustomerInfoByEmail($email)
     // {
     //     $this->db->select('userId, email, name');
@@ -60,7 +67,7 @@ class Login_model extends CI_Model
     //     return $query->row();
     // }
 
-   
+
     // function checkActivationDetails($email, $activation_id)
     // {
     //     $this->db->select('id');
@@ -96,17 +103,15 @@ class Login_model extends CI_Model
 
     //     return $query->row();
     // }
-    
+
     // function getRoleAccessMatrix($roleId)
     // {
     //     $this->db->select('roleId, access');
     //     $this->db->from('tbl_access_matrix');
     //     $this->db->where('roleId', $roleId);
     //     $query = $this->db->get();
-        
+
     //     $result = $query->row();
     //     return $result;
     // }
 }
-
-?>

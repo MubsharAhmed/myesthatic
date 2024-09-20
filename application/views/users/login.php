@@ -21,10 +21,10 @@
 
             <div class="col-md-6 bgLeft d-flex justify-content-center align-items-center ">
                 <div class="">
-                    <img class="img-fluid d-block mx-auto logoImg" src="./assets/images/logo.png" alt="">
+                    <img class="img-fluid d-block mx-auto logoImg" src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
                     <div class="my-2 d-flex gap-2 justify-content-center flex-wrap">
-                        <img class="brandBtn" src="./assets/images/AppStore.svg" alt="">
-                        <img class="brandBtn" src="./assets/images/GooglePlay.svg" alt="">
+                        <img class="brandBtn" src="<?php echo base_url(); ?>assets/images/AppStore.svg" alt="">
+                        <img class="brandBtn" src="<?php echo base_url(); ?>assets/images/GooglePlay.svg" alt="">
                     </div>
                     <!-- <div class="d-flex gap-2 flex-wrap align-items-center justify-content-center ">
                         <a class="link" href="#">Contact Us</a>
@@ -34,8 +34,8 @@
                 </div>
             </div>
             <div class="col-md-6 align-self-center my-2 my-md-0 overflow-hidden position-relative h100p">
-                <!-- <img class="imgwav" src="./assets/images/wav1.png" alt=""> -->
-                <img class="imgwav" src="./assets/images/wavb1.svg" alt="">
+                <!-- <img class="imgwav" src="<?php echo base_url(); ?>assets/images/wav1.png" alt=""> -->
+                <img class="imgwav" src="<?php echo base_url(); ?>assets/images/wavb1.svg" alt="">
                 <div class="container mb13 conSign">
 
 
@@ -126,7 +126,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <a href="<?php echo base_url(); ?>/users/signUp"
+                                    <a href="<?php echo base_url(); ?>Signup"
                                         class="forgText mt-4 mb-2 z9  ">Don't have an account?
                                         Sign Up</a>
                                 </div>
@@ -145,8 +145,8 @@
                                 <li><a href="#">Help</a></li>
                             </ul>
                         </div>
-                        <!-- <img class="imgwav2" src="./assets/images/wav2.png" alt=""> -->
-                        <img class="imgwav2" src="./assets/images/wavb2.svg" alt="">
+                        <!-- <img class="imgwav2" src="<?php echo base_url(); ?>assets/images/wav2.png" alt=""> -->
+                        <img class="imgwav2" src="<?php echo base_url(); ?>assets/images/wavb2.svg" alt="">
                     </div>
                 </div>
             </div>

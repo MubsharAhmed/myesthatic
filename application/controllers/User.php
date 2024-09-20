@@ -9,6 +9,7 @@ class User extends BaseController
     {
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->helper('form');
         // $this->isLoggedIn();
         if (!$this->isAdmin()) {
             redirect('login');
@@ -19,10 +20,12 @@ class User extends BaseController
     {
 
         $this->global['pageTitle'] = 'VearaLink : Dashboard';
+        // $role = $this->session->userdata('role');
+        // print_r($role);
+        // die;
         // $searchText = '';
         // $data['managerCount'] = $this->user_model->managerCount($searchText);
-        // $data['agentCount'] = $this->user_model->agentCount($searchText);
-        // $data['userCount'] = $this->user_model->userCount($searchText);
+
 
         $this->loadViews("frontend/dashboard", $this->global, NULL);
     }
@@ -36,7 +39,9 @@ class User extends BaseController
 
     public function addUser()
     {
-
+        if (!$this->isAdmin()) {
+            redirect('login');
+        }
         $this->global['pageTitle'] = 'My Esthatic : Add User';
         $this->loadViews("frontend/adduser", $this->global, NULL);
     }
