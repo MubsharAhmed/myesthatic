@@ -121,7 +121,7 @@
                                 class="material-icons-outlined">person_outline</i>Profile</a>
 
                         <hr class="dropdown-divider" />
-                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+                        <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="<?php echo base_url(); ?>logout"><i
                                 class="material-icons-outlined">power_settings_new</i>Logout</a>
                     </div>
                 </li>
@@ -321,7 +321,7 @@
             <!--end navigation-->
         </div>
         <div class="m-2">
-            <a href="#" class="btn btn-danger d-flex justify-content-center  align-items-center gap-2">
+            <a href="<?php echo base_url(); ?>logout" class="btn btn-danger d-flex justify-content-center  align-items-center gap-2">
                 <div class="icnonDiv">
 
                     <img class="i" src="<?php echo base_url(); ?>assets/images/LogOut.svg" alt="">
