@@ -36,9 +36,7 @@ class User extends BaseController
 
     public function addUser()
     {
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
+
         $this->global['pageTitle'] = 'My Esthatic : Add User';
         $this->loadViews("frontend/adduser", $this->global, NULL);
     }

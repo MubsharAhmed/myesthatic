@@ -49,10 +49,7 @@
                                 </div>
 
                             </div>
-
-                            <form action="<?php echo base_url(); ?>loginMe" method="post"
-                                class="bgCard mx-4 p-3 border8">
-                                <div>
+                            <div>
                                     <?php $this->load->helper('form'); ?>
                                     <?php echo validation_errors('<div class="alert alert-danger alert-dismissible fade show">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
                                     <?php
@@ -76,6 +73,10 @@
                                     </div>
                                     <?php } ?>
                                 </div>
+
+                            <form action="<?php echo base_url(); ?>loginMe" method="post"
+                                class="bgCard mx-4 p-3 border8">
+
                                 <h3 class="text-black text-center">Login To SpaStrategix</h3>
                                 <p class="text-black text-center">Enter Your Email Address And Password</p>
                                 <div action="<?php echo base_url(); ?>loginMe" method="post" class="my-2 row  ">
@@ -92,7 +93,7 @@
                                     <div class="col-md-12 my-2 ">
                                         <label for="email" class="fs3 mb-2">Email</label>
                                         <input class="form-control formInp py-1" type="text" placeholder="Enter Here"
-                                            name="email" />
+                                            name="email" required />
                                     </div>
 
                                 </div>
@@ -100,7 +101,7 @@
                                     <div class="col-md-12 my-2 ">
                                         <label for="password" class="fs3 mb-2">Password</label>
                                         <input class="form-control formInp py-1" type="text" placeholder=" Enter Here"
-                                            name="password" />
+                                            name="password" required />
                                     </div>
 
                                 </div>
