@@ -39,7 +39,7 @@ class Signup extends CI_Controller
         $this->form_validation->set_rules('last_name', 'Last Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[admin.email]|trim');
         $this->form_validation->set_rules('phone', 'Phone Number', 'required|trim');
-        $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|trim');
+        $this->form_validation->set_rules('password', 'Password', 'required|min_length[4]|trim');
         $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]|trim');
     
         // If validation fails, reload the signup page with the errors
@@ -81,6 +81,9 @@ class Signup extends CI_Controller
                     'role' => 'admin', 
                     'isLoggedIn' => TRUE
                 );
+
+                // print_r($sessionArray);
+                // die;
     
                 // Set session data
                 $this->session->set_userdata($sessionArray);

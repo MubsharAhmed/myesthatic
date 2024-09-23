@@ -8,8 +8,6 @@ class General_model extends CI_Model
         parent::__construct();
         $this->load->database();
     }
-
-
         
 }
 

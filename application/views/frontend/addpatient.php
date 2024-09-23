@@ -1,51 +1,124 @@
   <!--start main wrapper-->
   <main class="main-wrapper">
       <div class="main-content">
-
           <h3 class="fmon">Add Patient</h3>
-          <div class="row my-2">
-              <div class="col-md-6 my-2">
-                  <label class="slabel">First Name</label>
-                  <input type="text" class="form-control fsele" name="" id="" placeholder="Write Here" required>
-              </div>
-              <div class="col-md-6 my-2">
-                  <label class="slabel">Last Name</label>
-                  <input type="text" class="form-control fsele" name="" id="" placeholder="Write Here" required>
-              </div>
+          <form id="addPatientForm" enctype="multipart/form-data" method="post" action="<?= base_url('Patient/add_patient'); ?>">
+              <div class="row my-2">
+                  <div class="col-md-6 my-2">
+                      <label class="slabel">First Name</label>
+                      <input type="text" class="form-control fsele" name="first_name" placeholder="Write Here" required>
+                  </div>
+                  <div class="col-md-6 my-2">
+                      <label class="slabel">Last Name</label>
+                      <input type="text" class="form-control fsele" name="last_name" placeholder="Write Here" required>
+                  </div>
 
-              <div class="col-md-6 my-2">
-                  <label class="slabel">Email Address</label>
-                  <input type="email" class="form-control fsele" name="" id="" placeholder="Write Here" required>
-              </div>
-              <div class="col-md-6 my-2">
-                  <label class="slabel">Phone number</label>
-                  <input type="text" class="form-control fsele" name="" id="" placeholder="Write Here" required>
-              </div>
-              <div class="col-md-6 my-2">
-                  <label class="slabel">Date of birth</label>
-                  <input type="text" class="form-control fsele" name="" id="" placeholder="Write Here" required>
-              </div>
-              <!-- <div class="col-md-6 my-2">
-            <label class="slabel">Image</label>
-            <input type="file" class="d-none" id="imageUp">
-           <label for="imageUp" class="btn btnTap">Tap to Upload image</label>
-          </div>
-         -->
+                  <div class="col-md-6 my-2">
+                      <label class="slabel">Email Address</label>
+                      <input type="email" class="form-control fsele" name="email" placeholder="Write Here" required>
+                  </div>
+                  <div class="col-md-6 my-2">
+                      <label class="slabel">Phone number</label>
+                      <input type="text" class="form-control fsele" name="phone" placeholder="Write Here" required>
+                  </div>
+                  <div class="col-md-6 my-2">
+                      <label class="slabel">Date of birth</label>
+                      <input type="date" class="form-control fsele" name="dob" placeholder="Write Here" required>
+                  </div>
+                  <div class="col-md-6 my-2">
+                      <label class="slabel">Location</label>
+                      <select class="form-select fsele" name="location" id="location" required>
+                          <option value="" selected>Select Location</option>
+                          <!-- Options will be populated via AJAX -->
+                      </select>
+                  </div>
+                  <div class="col-md-6 my-2">
+                      <label class="slabel">Password</label>
+                      <input type="password" class="form-control fsele" name="password" placeholder="Write Here" required>
+                  </div>
 
-
-              <div class="col-md-12 my-2">
-                  <div class="d-flex justify-content-center align-items-center w-100">
-                      <button class="btn  btnAdd w-25 ">Add Patient</button>
+                  <div class="col-md-12 my-2">
+                      <div class="d-flex justify-content-center align-items-center w-100">
+                          <button type="submit" class="btn btnAdd w-25">Add Patient</button>
+                      </div>
                   </div>
               </div>
-          </div>
-
-
+          </form>
       </div>
   </main>
+
   <!--end main wrapper-->
 
 
   <!--start overlay-->
   <div class="overlay btn-toggle"></div>
   <!--end overlay-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+      $(document).ready(function() {
+          $.ajax({
+              url: '<?= base_url('Location/get_locations'); ?>',
+
+              method: 'GET',
+              success: function(data) {
+                  // console.log(data);
+                  var locations = JSON.parse(data);
+                  $.each(locations, function(index, location) {
+                      $('#location').append('<option value="' + location.id + '">' + location.name + '</option>');
+                  });
+              },
+              error: function(xhr, status, error) {
+                  console.error('Error fetching locations:', error);
+              }
+          });
+
+          $('#addPatientForm').on('submit', function(e) {
+              e.preventDefault();
+
+              var formData = new FormData(this);
+
+              $.ajax({
+                  url: '<?= base_url('Patient/add_patient'); ?>',
+                  method: 'POST',
+                  data: formData,
+                  contentType: false,
+                  processData: false,
+                  success: function(response) {
+                      var result = JSON.parse(response);
+                         if (result.success) {
+                          Swal.fire({
+                              icon: 'success',
+                              title: 'Success!',
+                              text: result.message,
+                              confirmButtonText: 'OK'
+                          }).then((result) => {
+                              if (result.isConfirmed) {
+                                  window.location.href = '<?= base_url('Patient'); ?>';
+                              }
+                          });
+                      } else {
+                          Swal.fire({
+                              icon: 'error',
+                              title: 'Oops...',
+                              text: 'Something went wrong!',
+                          });
+                      }
+                  },
+                  error: function(xhr, status, error) {
+                      console.error('Error adding user:', error);
+                      Swal.fire({
+                          icon: 'error',
+                          title: 'Oops...',
+                          text: 'Something went wrong!',
+                      });
+                  }
+              });
+          });
+
+
+      });
+  </script>

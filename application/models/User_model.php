@@ -1,8 +1,37 @@
-<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class User_model extends CI_Model
 {
-   
+
+    public function getUserById($userId)
+    {
+        $this->db->where('id', $userId);
+        $query = $this->db->get('admin');
+        return $query->row();
+    }
+
+    public function insert($data)
+    {
+        return $this->db->insert('user', $data);
+    }
+
+    public function get_users_with_pagination($limit, $offset)
+    {
+  
+            $this->db->select('user.*, locations.name as location_name');
+            $this->db->from('user');  
+            $this->db->join('locations', 'locations.id = user.location', 'left');  
+            $this->db->limit($limit, $offset);
+            $query = $this->db->get();
+            return $query->result_array();
+
+    }
+
+    public function get_users_count()
+    {
+        return $this->db->count_all('user'); 
+    }
+
     // function userCount($searchText, $userType = 'user')
     // {
     //     $this->db->select('*');
@@ -14,10 +43,10 @@ class User_model extends CI_Model
     //     }
     //     $this->db->where('role', $userType);
     //     $query = $this->db->get();
-        
+
     //     return $query->num_rows();
     // }
-   
+
     // function users($searchText, $page, $segment, $userType = 'user')
     // {
     //     $this->db->select('*');
@@ -31,7 +60,7 @@ class User_model extends CI_Model
     //     $this->db->order_by('id', 'DESC');
     //     $this->db->limit($page, $segment);
     //     $query = $this->db->get();
-        
+
     //     $result = $query->result();        
     //     return $result;
     // }
@@ -40,11 +69,11 @@ class User_model extends CI_Model
     // {
     //     $this->db->trans_start();
     //     $this->db->insert('users', $userInfo);
-        
+
     //     $insert_id = $this->db->insert_id();
-        
+
     //     $this->db->trans_complete();
-        
+
     //     return $insert_id;
     // }
 
@@ -59,7 +88,7 @@ class User_model extends CI_Model
     //     }
     //     $this->db->where('role', $userType);
     //     $query = $this->db->get();
-        
+
     //     return $query->num_rows();
     // }
 
@@ -77,7 +106,7 @@ class User_model extends CI_Model
     //     $this->db->order_by('BaseTbl.id', 'DESC');
     //     $this->db->limit($page, $segment);
     //     $query = $this->db->get();
-        
+
     //     $result = $query->result();
     //     return $result;
     // }
@@ -86,11 +115,11 @@ class User_model extends CI_Model
     // {
     //     $this->db->select('BaseTbl.*');
     //     $this->db->from('users as BaseTbl');
-        
+
     //     $this->db->where('BaseTbl.role', $userType);
     //     $this->db->order_by('BaseTbl.id', 'DESC');
     //     $query = $this->db->get();
-        
+
     //     $result = $query->result();
     //     return $result;
     // }
@@ -99,11 +128,11 @@ class User_model extends CI_Model
     // {
     //     $this->db->select('BaseTbl.*');
     //     $this->db->from('users as BaseTbl');
-        
+
     //     $this->db->where('BaseTbl.role', $userType);
     //     $this->db->order_by('BaseTbl.id', 'DESC');
     //     $query = $this->db->get();
-        
+
     //     $result = $query->result();
     //     return $result;
     // }
@@ -114,7 +143,7 @@ class User_model extends CI_Model
     //     $this->db->from('bets as BaseTbl');
     //     $this->db->join('users','users.id = BaseTbl.userId');
     //     $query = $this->db->get();
-        
+
     //     return $query->result();
     // }
 
@@ -125,7 +154,7 @@ class User_model extends CI_Model
     //     $this->db->where('username', $username);
     //     $this->db->where('role', 'user');
     //     $query = $this->db->get();
-        
+
     //     return $query->num_rows();
     // }
 
@@ -133,11 +162,11 @@ class User_model extends CI_Model
     // {
     //     $this->db->trans_start();
     //     $this->db->insert('users', $userInfo);
-        
+
     //     $insert_id = $this->db->insert_id();
-        
+
     //     $this->db->trans_complete();
-        
+
     //     return $insert_id;
     // }
 
@@ -152,7 +181,7 @@ class User_model extends CI_Model
     //     }
     //     $this->db->where('role', $userType);
     //     $query = $this->db->get();
-        
+
     //     return $query->num_rows();
     // }
 
@@ -170,7 +199,7 @@ class User_model extends CI_Model
     //     $this->db->order_by('BaseTbl.id', 'DESC');
     //     $this->db->limit($page, $segment);
     //     $query = $this->db->get();
-        
+
     //     $result = $query->result();
     //     return $result;
     // }
@@ -179,20 +208,20 @@ class User_model extends CI_Model
     // {
     //     $this->db->trans_start();
     //     $this->db->insert('users', $userInfo);
-        
+
     //     $insert_id = $this->db->insert_id();
-        
+
     //     $this->db->trans_complete();
-        
+
     //     return $insert_id;
     // }
-    
+
     // function getUserRoles()
     // {
     //     $this->db->select('roleId, role, status as roleStatus');
     //     $this->db->from('tbl_roles');
     //     $query = $this->db->get();
-        
+
     //     return $query->result();
     // }
 
@@ -208,7 +237,7 @@ class User_model extends CI_Model
 
     //     return $query->result();
     // }
-    
+
     // function getUserInfo($userId, $userRole = 'user')
     // {
     //     $this->db->select('*');
@@ -216,23 +245,23 @@ class User_model extends CI_Model
     //     $this->db->where('id', $userId);
     //     $this->db->where('role', $userRole);
     //     $query = $this->db->get();
-        
+
     //     return $query->row();
     // }
-    
+
     // function editUser($userInfo, $userId)
     // {
     //     $this->db->where('id', $userId);
     //     $this->db->update('users', $userInfo);
-        
+
     //     return TRUE;
     // }
-    
+
     // function deleteUser($userId)
     // {
     //     $this->db->where('id', $userId);
     //     $this->db->delete('users');
-        
+
     //     return $this->db->affected_rows();
     // }
 
@@ -242,7 +271,7 @@ class User_model extends CI_Model
     //     $this->db->where('userId', $userId);        
     //     $this->db->where('isDeleted', 0);
     //     $query = $this->db->get('tbl_users');
-        
+
     //     $user = $query->result();
 
     //     if(!empty($user)){
@@ -255,13 +284,13 @@ class User_model extends CI_Model
     //         return array();
     //     }
     // }
-   
+
     // function changePassword($userId, $userInfo)
     // {
     //     $this->db->where('userId', $userId);
     //     $this->db->where('isDeleted', 0);
     //     $this->db->update('tbl_users', $userInfo);
-        
+
     //     return $this->db->affected_rows();
     // }
 
@@ -285,7 +314,7 @@ class User_model extends CI_Model
     //     }
     //     $this->db->from('tbl_last_login as BaseTbl');
     //     $query = $this->db->get();
-        
+
     //     return $query->num_rows();
     // }
 
@@ -311,7 +340,7 @@ class User_model extends CI_Model
     //     $this->db->order_by('BaseTbl.id', 'DESC');
     //     $this->db->limit($page, $segment);
     //     $query = $this->db->get();
-        
+
     //     $result = $query->result();        
     //     return $result;
     // }
@@ -323,7 +352,7 @@ class User_model extends CI_Model
     //     $this->db->where('isDeleted', 0);
     //     $this->db->where('userId', $userId);
     //     $query = $this->db->get();
-        
+
     //     return $query->row();
     // }
 
@@ -335,7 +364,7 @@ class User_model extends CI_Model
     //     $this->db->where('BaseTbl.userId', $userId);
     //     $this->db->where('BaseTbl.isDeleted', 0);
     //     $query = $this->db->get();
-        
+
     //     return $query->row();
     // }
 

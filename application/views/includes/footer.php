@@ -1,3 +1,4 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!-- bootstrap js -->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
 

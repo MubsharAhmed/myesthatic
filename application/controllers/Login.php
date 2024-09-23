@@ -51,39 +51,45 @@ class Login extends CI_Controller
     public function loginMe()
     {
         $this->load->library('form_validation');
-
+    
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|max_length[128]|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|max_length[32]');
-
+    
         if ($this->form_validation->run() == FALSE) {
             $this->index();
         } else {
             $email = strtolower($this->security->xss_clean($this->input->post('email')));
             $password = $this->input->post('password');
-
+    
+            // Call the model to check login details
             $result = $this->login_model->loginMe($email, $password);
-
-            // pre($result); die;
-
+    
             if (!empty($result)) {
+                // Now set userId in the session
                 $sessionArray = array(
-                    // 'userId' => $result->admin_id,
+                    'userId' => $result->id, 
                     'name' => $result->name,
                     'email' => $result->email,
-                    'role' => 'user',
+                    'role' => $result->role,
                     'isLoggedIn' => TRUE
                 );
-
-
+                // print_r($sessionArray);
+                // die;
+    
+                // Set session data
                 $this->session->set_userdata($sessionArray);
-
+    
+                // Redirect to dashboard after successful login
                 redirect(base_url('dashboard'));
             } else {
+                // Set error message and redirect back to login page if login fails
                 $this->session->set_flashdata('error', 'Email or password mismatch');
                 redirect(base_url('login'));
             }
         }
     }
+    
+    
 
     /**
      * This function used to load forgot password view

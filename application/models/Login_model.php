@@ -29,6 +29,13 @@ class Login_model extends CI_Model
         return $this->db->insert_id(); 
     }
 
+    public function getUserById($userId)
+    {
+        $this->db->where('id', $userId);
+        $query = $this->db->get('admin'); 
+        return $query->row();
+    }
+
 
     // function checkEmailExist($email)
     // {

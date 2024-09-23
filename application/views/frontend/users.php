@@ -46,169 +46,15 @@
                                      <th>Items Checked Out</th>
                                      <th>Location</th>
                                      <th>Status</th>
-
                                      <th>Actions</th>
                                  </tr>
                              </thead>
                              <tbody>
-                                 <!-- Sample data -->
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">10</button></td>
-                                     <td>Location A</td>
-                                     <td>2 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">40</button></td>
-                                     <td>Location A</td>
-                                     <td>2 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">20</button></td>
-                                     <td>Location A</td>
-                                     <td>1 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">15</button></td>
-                                     <td>Location A</td>
-                                     <td>5 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">10</button></td>
-                                     <td>Location A</td>
-                                     <td>4 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">22</button></td>
-                                     <td>Location A</td>
-                                     <td>3 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">66</button></td>
-                                     <td>Location A</td>
-                                     <td>2 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td class="d-flex gap-1 align-items-center">
-                                         <img class="useImage" src="<?php echo base_url(); ?>assets/images/u1.png"
-                                             alt="">
-                                         Ronaldo
-                                     </td>
-                                     <td>Example@info.com</td>
-                                     <td>+98 765 4321 0</td>
-                                     <td><button class="btn btn-danger w-100">30</button></td>
-                                     <td>Location A</td>
-                                     <td>2 hours ago</td>
-
-
-                                     <td>
-                                         <div class="elep p-2 ">
-                                             <img src="<?php echo base_url(); ?>assets/images/ellep.png" alt="">
-                                         </div>
-                                     </td>
-                                 </tr>
-
-
-                                 <!-- More rows here -->
+                                 <!-- Data will be populated here by AJAX -->
                              </tbody>
                          </table>
+                         <div id="pagination" class="pagination-container"></div>
+
                      </div>
 
                  </div>
@@ -224,3 +70,64 @@
  <!--start overlay-->
  <div class="overlay btn-toggle"></div>
  <!--end overlay-->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script>
+$(document).ready(function() {
+    function loadUsers(page = 1) {
+        $.ajax({
+            url: '<?= base_url("User/fetch_users"); ?>',
+            method: 'POST',
+            data: { page: page },
+            dataType: 'json',
+            success: function(response) {
+                if (response.users.length > 0) {
+                    let userRows = '';
+                    $.each(response.users, function(index, user) {
+                        userRows += `<tr>
+                            <td class="d-flex gap-1 align-items-center">
+                                <img class="useImage" src="${user.image ? user.image : '<?= base_url("assets/images/default.png"); ?>'}" alt="">
+                                ${user.first_name} ${user.last_name}
+                            </td>
+                            <td>${user.email}</td>
+                            <td>${user.phone}</td>
+                            <td><button class="btn btn-danger w-100">${user.item_checkout || 0}</button></td>
+                            <td>${user.location_name || 'Unknown'}</td>
+                            <td>${user.created_at}</td>
+                            <td>
+                                <div class="elep p-2">
+                                    <img src="<?= base_url("assets/images/ellep.png"); ?>" alt="">
+                                </div>
+                            </td>
+                        </tr>`;
+                    });
+                    $('table tbody').html(userRows);
+                    // Pagination
+                    let paginationHTML = '';
+                    if (response.pagination.total_pages > 1) {
+                        for (let i = 1; i <= response.pagination.total_pages; i++) {
+                            paginationHTML += `<li class="page-item ${i === response.pagination.current_page ? 'active' : ''}">
+                                <a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
+                        }
+                    }
+                    $('#pagination').html(`<ul class="pagination">${paginationHTML}</ul>`);
+                } else {
+                    $('table tbody').html('<tr><td colspan="7">No users found</td></tr>');
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error fetching users:', error);
+            }
+        });
+    }
+
+    loadUsers();
+    $(document).on('click', '#pagination a', function(e) {
+        e.preventDefault();
+        let page = $(this).data('page');
+        loadUsers(page);
+    });
+});
+
+ </script>

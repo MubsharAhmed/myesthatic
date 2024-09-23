@@ -173,7 +173,7 @@
 
                 </li>
                 <li>
-                    <a href="<?php echo base_url(); ?>general/patients" class="">
+                    <a href="<?php echo base_url(); ?>patient" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>assets/images/Patients.svg" alt="">
@@ -183,7 +183,7 @@
 
                 </li>
                 <li>
-                    <a href="<?php echo base_url(); ?>general/locations" class="">
+                    <a href="<?php echo base_url(); ?>Location" class="">
                         <div class="icnonDiv">
 
                             <span class="img2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
