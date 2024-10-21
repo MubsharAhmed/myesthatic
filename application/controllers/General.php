@@ -54,34 +54,7 @@ class General extends BaseController
         $this->loadViews("frontend/vendors", $this->global, NULL);
     }
 
-    public function totalInventory()
-    {
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
-        $this->global['pageTitle'] = 'My Esthatic : Total Inventory';
 
-        $this->loadViews("frontend/totalinventory", $this->global, NULL);
-    }
-
-    public function inventoryHistory()
-    {
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
-        $this->global['pageTitle'] = 'My Esthatic : Inventory History';
-
-        $this->loadViews("frontend/inventoryhistory", $this->global, NULL);
-    }
-    public function addInventory()
-    {
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
-        $this->global['pageTitle'] = 'My Esthatic : Add Inventory';
-
-        $this->loadViews("frontend/addinventory", $this->global, NULL);
-    }
 
     public function financialReports()
     {
@@ -114,25 +87,7 @@ class General extends BaseController
     }
 
 
-    public function productCost()
-    {
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
-        $this->global['pageTitle'] = 'My Esthatic : Product Cost';
 
-        $this->loadViews("frontend/productcost", $this->global, NULL);
-    }
-
-    public function addProductCost()
-    {
-        if (!$this->isAdmin()) {
-            redirect('login');
-        }
-        $this->global['pageTitle'] = 'My Esthatic : Add Product Cost';
-
-        $this->loadViews("frontend/addproductcost", $this->global, NULL);
-    }
 
     public function shop()
     {
@@ -146,28 +101,23 @@ class General extends BaseController
 
     public function settings()
     {
-        // Check if the user is logged in and is an admin
         if (!$this->isAdmin()) {
             redirect('login');
         }
 
-        // Get the user ID from session
         $userId = $this->session->userdata('userId');
 
-        // Load the model to fetch user data
         $this->load->model('user_model');
 
-        // Fetch the user data based on user ID
         $userData = $this->user_model->getUserById($userId);
 
         if (!empty($userData)) {
-            // Pass user data to the view
+        
             $data['user'] = $userData;
         } else {
             $data['user'] = null;
         }
 
-        // Set page title
         $this->global['pageTitle'] = 'My Esthatic : Settings';
 
         // Load the settings view with user data

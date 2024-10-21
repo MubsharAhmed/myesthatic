@@ -100,7 +100,7 @@
                                 <div class="my-2 row ">
                                     <div class="col-md-12 my-2 ">
                                         <label for="password" class="fs3 mb-2">Password</label>
-                                        <input class="form-control formInp py-1" type="text" placeholder=" Enter Here"
+                                        <input class="form-control formInp py-1" type="password" placeholder=" Enter Here"
                                             name="password" required />
                                     </div>
 

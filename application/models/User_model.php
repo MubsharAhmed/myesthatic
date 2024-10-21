@@ -10,26 +10,126 @@ class User_model extends CI_Model
         return $query->row();
     }
 
+    // public function insert($data)
+    // {
+    //     return $this->db->insert('user', $data);
+    // }
     public function insert($data)
     {
-        return $this->db->insert('user', $data);
+        if ($this->db->insert('user', $data)) {
+            return true;
+        } else {
+            log_message('error', 'Database insert error: ' . $this->db->last_query() . ' Error: ' . json_encode($this->db->error()));
+            return false;
+        }
     }
+    // public function insert($data)
+    // {
+    //     return $this->db->insert('user', $data); // Assuming your table is named 'users'
+    // }
 
-    public function get_users_with_pagination($limit, $offset)
+    public function get_users_with_pagination($limit, $offset, $filter, $startDate, $endDate)
     {
-  
-            $this->db->select('user.*, locations.name as location_name');
-            $this->db->from('user');  
-            $this->db->join('locations', 'locations.id = user.location', 'left');  
-            $this->db->limit($limit, $offset);
-            $query = $this->db->get();
-            return $query->result_array();
+        $this->db->select('user.*, locations.name as location_name');
+        $this->db->from('user');
+        $this->db->join('locations', 'locations.id = user.location', 'left');
 
+        if ($filter !== 'all') {
+            if ($filter === 'today') {
+                $this->db->where('DATE(user.created_at)', date('Y-m-d'));
+            } elseif ($filter === 'this_week') {
+                $this->db->where('YEARWEEK(user.created_at, 1) = YEARWEEK(CURDATE(), 1)');
+            } elseif ($filter === 'last_week') {
+                $this->db->where('YEARWEEK(user.created_at, 1) = YEARWEEK(CURDATE() - INTERVAL 1 WEEK, 1)');
+            } elseif ($filter === 'this_month') {
+                $this->db->where('MONTH(user.created_at)', date('m'));
+                $this->db->where('YEAR(user.created_at)', date('Y'));
+            } elseif ($filter === 'last_month') {
+                $this->db->where('MONTH(user.created_at)', date('m', strtotime('-1 month')));
+                $this->db->where('YEAR(user.created_at)', date('Y'));
+            }
+        }
+
+        if (!empty($startDate) && !empty($endDate)) {
+            $this->db->where('DATE(user.created_at) >=', date('Y-m-d', strtotime($startDate)));
+            $this->db->where('DATE(user.created_at) <=', date('Y-m-d', strtotime($endDate)));
+        } elseif (!empty($startDate)) {
+            $this->db->where('DATE(user.created_at)', date('Y-m-d', strtotime($startDate)));
+        }
+
+
+        // Limit and offset for pagination
+        $this->db->limit($limit, $offset);
+
+        $query = $this->db->get();
+        log_message('debug', $this->db->last_query()); // Log the last executed query for debugging
+        return $query->result_array();
     }
+
+    public function update_user_status($user_id, $status)
+    {
+        $this->db->where('id', $user_id);
+        return $this->db->update('user', ['status' => $status]);
+    }
+
+
+
+
 
     public function get_users_count()
     {
-        return $this->db->count_all('user'); 
+        return $this->db->count_all('user');
+    }
+
+    public function getAllUsers()
+    {
+        $query = $this->db->get('user');
+        return $query->result();
+    }
+
+
+    //////////api functions
+    public function get_user_by_email($email)
+    {
+        $this->db->where('email', $email);
+        $query = $this->db->get('user'); // Assuming your table name is 'users'
+        return $query->row(); // Return a single row
+    }
+
+    public function isValidToken($userId, $token)
+    {
+
+        $this->db->where('id', $userId);
+        $this->db->where('token', $token);
+        $query = $this->db->get('user'); 
+
+        return $query->num_rows() > 0; 
+    }
+
+    public function updatePassword($user_id, $hashed_password)
+    {
+        $this->db->where('id', $user_id);
+        return $this->db->update('user', ['password' => $hashed_password]);
+    }
+
+    public function getUserData($user_id)
+    {
+        $this->db->where('id', $user_id);
+        $query = $this->db->get('user');
+        return $query->row_array(); // Return as an associative array
+    }
+
+    public function getUserByEmail($email)
+    {
+        $query = $this->db->get_where('user', ['email' => $email]);
+        return $query->row();
+    }
+
+
+    public function deleteToken($token)
+    {
+        $this->db->where('token', $token);
+        return $this->db->delete('password_resets');
     }
 
     // function userCount($searchText, $userType = 'user')

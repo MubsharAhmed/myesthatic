@@ -44,7 +44,7 @@
             <div class="btn-toggle d-block d-md-none">
                 <a href="javascript:;"><i class="material-icons-outlined">menu</i></a>
             </div>
-            <div class="search-bar flex-grow-1">
+            <div class="search-bar flex-grow-1" style="visibility: hidden;">
                 <div class="position-relative">
                     <input class="form-control pe-5 search-control d-lg-block d-none " type="text"
                         placeholder="Search Something">
@@ -69,11 +69,6 @@
                                     Nothing To Show
                                 </div>
                                 <hr>
-
-
-
-
-
                             </div>
                             <div class="card-footer text-center bg-transparent">
                                 <a href="javascript:;" class="btn w-100">See All Search Results</a>
@@ -97,10 +92,14 @@
                     <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
                         <div class="d-flex align-items-center">
                             <div class="me-1">
-                                <p class="mb-0 fs2">Eleanor Pena</p>
+                                <p class="mb-0 fs2"> <?php if (isset($user) && !empty($user)): ?>
+                                        <?php echo htmlspecialchars($user->name); ?>
+                                    <?php else: ?>
+                                        Guest
+                                    <?php endif; ?></p>
                                 <p class="text-muted mt-0 fmon text-end mb-0 "> Admin</p>
                             </div>
-                            <img src="<?php echo base_url(); ?>assets/images/avatars/01.png" class="p-1 borderCustom"
+                            <img src="<?php echo isset($user->image) ? $user->image : base_url('assets/images/avatars/01.png'); ?>" class="p-1 borderCustom"
                                 width="45" height="45" style="border-radius: 50%;" />
 
 
@@ -109,9 +108,19 @@
                     <div class="dropdown-menu dropdown-user dropdown-menu-end shadow">
                         <a class="dropdown-item gap-2 py-2" href="javascript:;">
                             <div class="text-center">
-                                <img src="<?php echo base_url(); ?>assets/images/avatars/01.png" class="p-1 shadow mb-3"
-                                    width="90" height="90" alt="" />
-                                <h5 class="user-name mb-0 fw-bold">Eleanor Pena</h5>
+                                <img src="<?php echo isset($user->image) ? $user->image : base_url('assets/images/avatars/01.png'); ?>"
+                                    class="p-1 shadow mb-3"
+                                    width="90" height="90"
+                                    alt="<?php echo isset($user->name) ? htmlspecialchars($user->name) : 'Default Avatar'; ?>" />
+                                <?php //echo !empty($user->image) ? $user->image : base_url('assets/images/profimage.svg'); 
+                                ?>
+                                <h5 class="user-name mb-0 fw-bold">
+                                    <?php if (isset($user) && !empty($user)): ?>
+                                        <?php echo htmlspecialchars($user->name); ?>
+                                    <?php else: ?>
+                                        Guest
+                                    <?php endif; ?>
+                                </h5>
                                 <small class="text-muted mt-0 fmon"> Pharmacy:25dsaf84</small>
                             </div>
                         </a>
@@ -213,7 +222,7 @@
 
                 </li>
                 <li>
-                    <a href="<?php echo base_url(); ?>general/totalInventory" class="">
+                    <a href="<?php echo base_url(); ?>inventory" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>assets/images/Inventory.svg" alt="">
@@ -224,7 +233,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo base_url(); ?>general/inventoryHistory" class="">
+                    <a href="<?php echo base_url(); ?>inventory/inventoryHistory" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>assets/images/Inventory.svg" alt="">
@@ -259,7 +268,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo base_url(); ?>general/productCost" class="">
+                    <a href="<?php echo base_url(); ?>Cost" class="">
                         <div class="icnonDiv">
 
                             <img class="img2" src="<?php echo base_url(); ?>assets/images/Reports.svg" alt="">

@@ -146,12 +146,46 @@ class BaseController extends CI_Controller {
      * @param {mixed} $footerInfo : This is array of footer information
      * @return {null} $result : null
      */
-    function loadViews($viewName = "", $headerInfo = NULL, $pageInfo = NULL, $footerInfo = NULL){
-		// pre($this->global); die;
-        $this->load->view('includes/header', $headerInfo);
-        $this->load->view($viewName, $pageInfo);
-        $this->load->view('includes/footer', $footerInfo);
-    }
+    // function loadViews($viewName = "", $headerInfo = NULL, $pageInfo = NULL, $footerInfo = NULL){
+
+	// 	$userId = $this->session->userdata('userId');
+
+    //     $this->load->model('user_model');
+
+    //     $userData = $this->user_model->getUserById($userId);
+
+    //     if (!empty($userData)) {
+        
+    //         $data['user'] = $userData;
+    //     } else {
+    //         $data['user'] = null;
+    //     }
+		
+
+    //     $this->load->view('includes/header', $headerInfo, $data);
+    //     $this->load->view($viewName, $pageInfo);
+    //     $this->load->view('includes/footer', $footerInfo);
+    // }
+	function loadViews($viewName = "", $headerInfo = NULL, $pageInfo = NULL, $footerInfo = NULL) {
+		$userId = $this->session->userdata('userId');
+	
+		$this->load->model('user_model');
+		$userData = $this->user_model->getUserById($userId);
+	
+		$data = [];
+		if (!empty($userData)) {
+			$data['user'] = $userData;
+		} else {
+			$data['user'] = null;
+		}
+		// print_r($userData);
+		// die;
+	
+		// Pass the user data to the header and view
+		$this->load->view('includes/header', array_merge((array)$headerInfo, $data));
+		$this->load->view($viewName, array_merge((array)$pageInfo, $data));
+		$this->load->view('includes/footer', $footerInfo);
+	}
 	
 	/**
 	 * This function used provide the pagination resources

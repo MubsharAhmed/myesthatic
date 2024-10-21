@@ -23,16 +23,54 @@ class Login_model extends CI_Model
         }
     }
 
+    // function loginMe($email, $password)
+    // {
+    //     // Query for 'admin' table
+    //     $query1 = $this->db->select('id, name, email, password, "admin" as user_type')
+    //         ->from('admin')
+    //         ->where('email', $email)
+    //         ->get_compiled_select();
+
+    //     // Query for 'user' table
+    //     $query2 = $this->db->select('id, name, email, password, "user" as user_type')
+    //         ->from('user')
+    //         ->where('email', $email)
+    //         ->get_compiled_select();
+
+    //     // Query for 'patients' table
+    //     $query3 = $this->db->select('id, name, email, password, "patients" as user_type')
+    //         ->from('patients')
+    //         ->where('email', $email)
+    //         ->get_compiled_select();
+
+    //     // Union all queries together
+    //     $sql = "($query1) UNION ($query2) UNION ($query3)";
+    //     $query = $this->db->query($sql);
+
+    //     $user = $query->row();
+
+    //     if (!empty($user)) {
+    //         if (verifyHashedPassword($password, $user->password)) {
+    //             return $user;
+    //         } else {
+    //             return array();
+    //         }
+    //     } else {
+    //         return array(); // No user found
+    //     }
+    // }
+
+
     public function registerUser($data)
     {
         $this->db->insert('admin', $data);
-        return $this->db->insert_id(); 
+        return $this->db->insert_id();
     }
 
     public function getUserById($userId)
     {
         $this->db->where('id', $userId);
-        $query = $this->db->get('admin'); 
+        $query = $this->db->get('admin');
         return $query->row();
     }
 

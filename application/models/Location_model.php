@@ -18,6 +18,12 @@ class Location_model extends CI_Model
     public function get_locations() {
         return $this->db->get('locations')->result_array(); // Adjust table name if needed
     }
+
+    public function delete_location($id) {
+        $this->db->where('id', $id);
+        return $this->db->delete('locations');
+    }
+    
     
 
     

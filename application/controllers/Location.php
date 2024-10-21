@@ -7,7 +7,7 @@ class Location extends BaseController
     public function __construct()
     {
         parent::__construct();
-        // $this->load->model('Location_model');
+        $this->load->model('Location_model');
     }
 
     public function index()
@@ -86,6 +86,16 @@ class Location extends BaseController
         $locations = $this->Location_model->get_locations(); 
         echo json_encode($locations);
     }
+
+    public function deleteLocation() {
+        $locationId = $this->input->post('id');
+        if ($this->Location_model->delete_location($locationId)) {
+            echo json_encode(['success' => true]);
+        } else {
+            echo json_encode(['success' => false]);
+        }
+    }
+    
     
     
 }
